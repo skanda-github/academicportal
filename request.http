@@ -1,0 +1,26 @@
+### Save a new student
+POST http://localhost:8080/students
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "johndoe@example.com"
+}
+
+###
+
+### Enroll student in a course (Assuming studentId=1 and courseId=1)
+POST http://localhost:8080/students/1/enroll/1
+Content-Type: application/json
+
+###
+
+### Get all students with their enrollments (Left Join)
+GET http://localhost:8080/students/with-enrollments
+
+###
+
+### Get enrollments by a specific student (Inner Join) (Assuming studentId=1)
+GET http://localhost:8080/students/1/enrollments
+
+###
